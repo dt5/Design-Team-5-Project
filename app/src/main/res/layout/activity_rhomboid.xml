@@ -11,11 +11,25 @@
         android:id="@+id/rhom_Image"
         />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottommenu"
+        android:id="@+id/view" />
+    <com.example.doranwalsten.simpleimagedraw.RhomboidFlap
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id = "@+id/flap"/>
+
     <SeekBar
         android:id="@+id/seekBar_1"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:progress="50"
+        android:progress="87"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:minHeight="3dp"
@@ -30,7 +44,7 @@
         android:id="@+id/seekBar_2"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:progress="50"
+        android:progress="0"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:minHeight="3dp"
@@ -46,7 +60,7 @@
         android:id="@+id/seekBar_3"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:progress="50"
+        android:progress="67"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:minHeight="3dp"
@@ -57,5 +71,35 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView1"
+        android:layout_above="@+id/seekBar_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView2"
+        android:layout_above="@+id/seekBar_2"
+        android:layout_alignRight="@+id/seekBar_2"
+        android:layout_alignEnd="@+id/seekBar_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/seekBar_3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

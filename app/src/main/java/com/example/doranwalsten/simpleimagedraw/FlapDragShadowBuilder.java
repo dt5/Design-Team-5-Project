@@ -12,15 +12,23 @@ import android.view.View;
 public class FlapDragShadowBuilder extends View.DragShadowBuilder {
 
 
-    Point touchPointCoord;
     private Bitmap image;
+    float x_displacement;
+    float y_displacement;
 
     public FlapDragShadowBuilder(Bitmap view_image) {
         super();
         image = view_image;
-        touchPointCoord = new Point();
+        //touchPointCoord = new Point();
+        //x_displacement = x;
+        //y_displacement = y;
     }
 
+    public void setDisplacement(float x, float y) {
+        x_displacement = x;
+        y_displacement = y;
+
+    }
     @Override
     public void onDrawShadow(Canvas canvas) {
         canvas.drawBitmap(image,0,0,null);
@@ -32,6 +40,6 @@ public class FlapDragShadowBuilder extends View.DragShadowBuilder {
 
         shadowSize.x = image.getWidth();
         shadowSize.y = image.getHeight();
-        shadowTouchPoint.set(shadowSize.x, shadowSize.y);
+        shadowTouchPoint.set(shadowSize.x/2 + (int) x_displacement, shadowSize.y/2 + (int) y_displacement);
     }
 }
